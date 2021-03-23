@@ -23,8 +23,8 @@ const SIZES = {
 };
 
 const ProgressBar = ({ value, size }) => {
-  const thing = Object.keys(SIZES);
-  if (!thing.includes(size)) {
+  const validSizes = Object.keys(SIZES);
+  if (!validSizes.includes(size)) {
     throw new Error(`Unknown size passed to ProgressBar: ${size}`);
   }
 
